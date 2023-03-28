@@ -1,6 +1,6 @@
 package enums;
 
-public enum Manufactures {
+public enum Manufacture {
     DYSON("Dyson"),
     ROWENTA("Rowenta"),
     BABYLISS("BaByliss"),
@@ -8,7 +8,7 @@ public enum Manufactures {
 
     private final String manufacture;
 
-    Manufactures(String manufacture) {
+    Manufacture(String manufacture) {
         this.manufacture = manufacture;
     }
 

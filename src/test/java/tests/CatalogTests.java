@@ -4,8 +4,9 @@ import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 
 import java.util.ArrayList;
+import java.util.List;
 
-import static enums.Manufactures.*;
+import static enums.Manufacture.*;
 import static helpers.CatalogHelper.*;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
@@ -35,7 +36,7 @@ public class CatalogTests extends BaseTest{
     @Test
     public void shouldSelectSeveralManufactures() {
         //given
-        ArrayList<String> manufactures = new ArrayList<>();
+        List<String> manufactures = new ArrayList<>();
         manufactures.add(DYSON.getText());
         manufactures.add(ROWENTA.getText());
         manufactures.add(BABYLISS.getText());

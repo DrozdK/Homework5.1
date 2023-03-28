@@ -6,18 +6,17 @@ import org.openqa.selenium.By;
 import java.util.ArrayList;
 import java.util.List;
 
+import static constants.Constants.Url.ONLINER_START_PAGE;
 import static enums.Manufacture.*;
 import static helpers.CatalogHelper.*;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-public class CatalogTests extends BaseTest{
-
-    private static final String url = "https://onliner.by";
+public class CatalogTests extends BaseTest {
 
     @BeforeAll
     public void setUp() {
-        open(url);
+        open(ONLINER_START_PAGE);
     }
 
     @Test
@@ -42,7 +41,7 @@ public class CatalogTests extends BaseTest{
         manufactures.add(BABYLISS.getText());
         manufactures.add(BABYLISS_PRO.getText());
         //when
-        open(url);
+        open(ONLINER_START_PAGE);
         driver.findElement(FEN_BUTTON).click();
         ScrollPage();
         selectManufacture(manufactures.get(0));
@@ -55,6 +54,6 @@ public class CatalogTests extends BaseTest{
 
     @AfterAll
     public void tearDown() {
-       close();
+        close();
     }
 }
